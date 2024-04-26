@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "redis-search-api"
+version = "0.1.0"
+description = ""
+authors = ["Dmytro Maior <mayor4090Gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+redis = "^5.0.4"
+fastapi = {extras = ["all"], version = "^0.110.2"}
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+transformers = "^4.40.1"
+torch = "^2.3.0"
+gunicorn = "^22.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

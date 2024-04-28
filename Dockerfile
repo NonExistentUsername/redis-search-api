@@ -31,4 +31,4 @@ COPY --from=builder /app/dist/*.whl ./
 RUN pip install ./*.whl --no-cache-dir \
     && rm -rf /app/*.whl
 
-CMD ["gunicorn", "--bind", "0.0.0.0:80",  "--workers", "1", "--threads", "4", "-k", "--timeout", "120", "uvicorn.workers.UvicornWorker", "redis_search_api.main:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:80",  "--workers", "1", "--threads", "4", "-k", "uvicorn.workers.UvicornWorker", "--timeout", "120", "redis_search_api.main:app"]

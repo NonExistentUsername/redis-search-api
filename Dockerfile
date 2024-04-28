@@ -20,7 +20,7 @@ COPY pyproject.toml ./
 COPY redis_search_api ./redis_search_api
 
 RUN touch README.md \
-    && pip install "poetry==1.6.1" --no-cache-dir \
+    && pip install "poetry==1.8.2" --no-cache-dir \
     && poetry config virtualenvs.create false \
     && poetry build -f wheel
 

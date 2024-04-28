@@ -1,4 +1,4 @@
-FROM nvidia/cuda:12.1.1-runtime-ubuntu20.04 as base
+FROM nvidia/cuda:12.4.1-base-ubuntu22.04 as base
 
 RUN apt-get update && \
     apt-get install -y python3-pip python3-dev python-is-python3 && \

@@ -6,7 +6,7 @@ authors = ["Dmytro Maior <mayor4090Gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.10"
 redis = "^5.0.4"
 fastapi = {extras = ["all"], version = "^0.110.2"}
 uvicorn = {extras = ["standard"], version = "^0.29.0"}

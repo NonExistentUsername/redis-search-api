@@ -8,7 +8,7 @@ from transformers import AutoModel, AutoTokenizer, pipeline  # type: ignore
 EMBEDDING_MODEL_NAME = "andersonbcdefg/bge-small-4096"
 VECTOR_DIMENSION = 384
 TOKENS_LIMIT = 4096 - 16  # To be safe
-DEVICE = "cpu"
+DEVICE = "cuda"
 
 tokenizer = AutoTokenizer.from_pretrained(EMBEDDING_MODEL_NAME, truncation=True)
 model = AutoModel.from_pretrained(EMBEDDING_MODEL_NAME).half().to(DEVICE)
